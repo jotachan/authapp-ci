@@ -102,7 +102,7 @@ Manage Jenkins → Global Tool Configuration
 
 - **Name:** `Java21`
 - **JAVA_HOME:** `/opt/java/openjdk`
-  _(o la ruta exacta que obtuviste con `readlink -f $(which java)` dentro del contenedor)_
+  _(o la ruta exacta que obtuviste con `docker exec jenkins bash -c 'dirname $(dirname $(readlink -f $(which java)))'` dentro del contenedor)_
 
 ---
 
